@@ -1,12 +1,12 @@
-title:            Minimal Mistakes
+title:            抽象艺术
 tagline:          Jekyll Theme
 description:      A responsive Jekyll theme large featured images and solid typography.
 #Comment out url when working locally to resolve base urls correctly
-url:              http://mmistakes.github.io/minimal-mistakes
+url:              http://localhost:4000
 
 # Owner/author information
 owner:
-  name:           Michael Rose
+  name:           Demin Xu
   avatar:         bio-photo.jpg
   bio:            "Just another boring, time traveling, tattooed, designer from Buffalo New York."
   email:          michael@mademistakes.com

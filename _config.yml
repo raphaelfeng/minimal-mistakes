@@ -30,13 +30,13 @@ bing_verify:        D81F4C18A6CB3018F64D7C827D953DFD
 # Links to include in top navigation
 # For external links add external: true
 links:
-  - title: About
+  - title: 作品
     url: /about
-  - title: Articles
+  - title: 展览信息
     url: /articles
-  - title: Theme Setup
+  - title: 理论学说
     url: /theme-setup
-  - title: Made Mistakes
+  - title: 简历
     url: http://mademistakes.com
     external: true
 

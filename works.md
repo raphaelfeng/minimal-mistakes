@@ -26,7 +26,7 @@ imageroot: /assets/images/works/series1/fullsize
 <link rel="stylesheet" href="{{ site.url }}/assets/js/vendor/galleria/themes/classic/galleria.classic.css">
 <!-- <link rel="stylesheet" href="/assets/js/vendor/galleria/themes/twelve/galleria.twelve.css"> -->
 <style>
-    .galleria-classic{ width: 700px; height: 400px; background: #000 }
+    .galleria-classic{ max-width: 100%; height: auto; background: #000 }
 </style>
 
 ## 作品系列一：
@@ -52,14 +52,11 @@ imageroot: /assets/images/works/series1/fullsize
 <script>
 Galleria.configure({
     lightbox: true,
-    carousel: true
+    carousel: true,
+    responsive: true,
+    height: 0.618
 });
 
 Galleria.loadTheme('{{ site.url }}/assets/js/vendor/galleria/themes/classic/galleria.classic.min.js');
 Galleria.run('.galleria-classic');  
-
-// Galleria.loadTheme('/assets/js/vendor/galleria/themes/twelve/galleria.twelve.js');
-// Galleria.run('.galleria-twelve');  
-
-// debugger;
 </script>

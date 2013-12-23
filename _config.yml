@@ -2,7 +2,8 @@ title:            抽象艺术
 tagline:          Jekyll Theme
 description:      A responsive Jekyll theme large featured images and solid typography.
 #Comment out url when working locally to resolve base urls correctly
-url:              http://raphaelfeng.github.io/minimal-mistakes
+url:              http://raphaelfeng.github.io/xudemin
+# url:  http://localhost:4000
 
 # Owner/author information
 owner:
@@ -11,15 +12,16 @@ owner:
   bio:            "抽象文化学者，艺术家（诗人，画家，艺术理论家），抽象艺术科学，抽象诗，抽象文学，抽象艺术文化创导者"
   email:          xudemin@xudemin.com
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  twitter:        "xudemin"
-  facebook:       
-  github:         "xudemin"
-  linkedin:       
-  instagram:      "xudemin"
-  lastfm:         
-  tumblr:         
+  weibo:          xudemin
+  twitter:
+  facebook:
+  github:
+  linkedin:
+  instagram:
+  lastfm:
+  tumblr:
   # For Google Authorship https://plus.google.com/authorship
-  google_plus:    "http://plus.google.com/118238196859537351707"
+  google_plus:
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   UA-2011187-3
@@ -31,14 +33,14 @@ bing_verify:        D81F4C18A6CB3018F64D7C827D953DFD
 # For external links add external: true
 links:
   - title: 作品
-    url: /about
+    url: /works
   - title: 展览信息
-    url: /articles
+    url: /exhibitions
   - title: 理论学说
-    url: /theme-setup
+    url: /theory
   - title: 简历
-    url: http://mademistakes.com
-    external: true
+    url: /about
+    external: false
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/New_York
@@ -62,6 +64,57 @@ kramdown:
     coderay_tab_width: 4
     coderay_bold_every: 10
     coderay_css: class
+
+# plugins:
+# picture_tag
+
+picture:
+  source: "/assets/images/_fullsize"
+  output: "generated"
+  markup: "picturefill"
+  presets:
+    # Full width pictures
+    default:
+      ppi: [1, 1.5]
+      attr:
+        class: blog-full
+        itemprop: image
+      source_lrg:
+        media: "(min-width: 40em)"
+        width: 700
+      source_med:
+        media: "(min-width: 30em)"
+        width: 450
+      source_default:
+        width: 350
+        height: 200
+    # Half width pictures
+    half:
+      ppi: [1, 1.5]
+      attr:
+        data-location: "{{location}}"
+        data-active: nil
+      source_lrg:
+        media: "(min-width: 40em)"
+        width: 400
+      source_med:
+        media: "(min-width: 30em)"
+        width: 250
+      source_default:
+        width: 350
+    # Self-set resolution sources. Useful if you don't want a 1:1 image size to dppx ratio.
+    gallery:
+      source_wide_hi:
+        media: "(min-width: 40em) and (min-resolution: 1.5dppx)"
+        width: 900
+        height: 600
+      source_wide:
+        media: "(min-width: 40em)"
+        width: 600
+        height: 400
+      source_default:
+        width: 250
+        height: 250
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]

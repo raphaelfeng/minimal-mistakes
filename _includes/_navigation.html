@@ -6,7 +6,15 @@
 		<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 		    <ul>
 		        {% for link in site.links %}
-				<li><a href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+				<li>
+					<a href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}" {% if link.external %}target="_blank"{% endif %}>
+					{% if page.url contains link.url %}
+					<u>{{ link.title }}</u>
+					{% else %}
+					{{ link.title }}
+					{% endif %}
+					</a>
+				</li>
 		        {% endfor %}
 		        <li><i class="icon-feed"></i> <a href="{{ site.url }}/feed.xml" title="Atom/RSS feed">Feed</a>
 		    </ul>
